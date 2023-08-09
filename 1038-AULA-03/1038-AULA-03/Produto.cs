@@ -18,22 +18,16 @@ namespace _1038_AULA_03
             return valorTotal = preco * quantidade;
         }
 
-        public void AdicionarProdutos(int qtde) 
+        public void AdicionarProdutos(int qtde)
         {
-            Console.WriteLine($"====== Estoque ======{Environment.NewLine}" +
-                              $"Nome: {Environment.NewLine}{nome}" + 
-                              $"Preço: {Environment.NewLine}{preco}" +
-                              $"Quantidade: {Environment.NewLine}{quantidade + qtde}" +
-                              $"Valor Total no estoque: {Environment.NewLine}{valorTotal}");
+            quantidade += qtde;
+            ValorTotalEstoque();
         }
 
         public void RemoverProdutos(int qtde)
         {
-            Console.WriteLine($"====== Estoque ======{Environment.NewLine}" +
-                              $"Nome: {Environment.NewLine}{nome}" +
-                              $"Preço: {Environment.NewLine}{preco}" +
-                              $"Quantidade: {Environment.NewLine}{quantidade - qtde}" +
-                              $"Valor Total no estoque: {Environment.NewLine}{valorTotal}");
+            quantidade -= qtde;
+            ValorTotalEstoque();
         }
     }
 }
